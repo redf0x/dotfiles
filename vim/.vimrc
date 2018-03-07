@@ -23,7 +23,8 @@ set formatoptions=tcqn1     " t - autowrap normal text
                             " 2 - use indenting from 2nd line of para
 
 set list                    " Show whitespace as special chars - see listchars
-set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:· " Unicode characters for various things
+" tab:▸\ "
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬ " Unicode characters for various things
 
 " Some useful macros
 nmap \A :set formatoptions+=a<CR>:echo "autowrap enabled"<CR>
