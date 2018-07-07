@@ -47,8 +47,16 @@ nmap \z :w<CR>:!open %<CR><CR>
 " line wrapping on, this can cause the cursor to actually skip a few lines on the screen because
 " it's moving from line N to line N+1 in the file. I want this to act more visually - I want `down'
 " to mean the next line on the screen
-nmap j gj
-nmap k gk
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
 
 " Trim spaces at EOL and retab. I run `:Clean` a lot to clean up files.
 command! TEOL %s/\s\+$//
