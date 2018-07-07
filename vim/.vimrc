@@ -13,6 +13,7 @@ set notitle
 set tabstop=8
 set shiftwidth=8
 set noexpandtab
+set nolist
 
 silent! set foldmethod=marker " Use braces by default
 set formatoptions=tcqn1     " t - autowrap normal text
@@ -22,8 +23,8 @@ set formatoptions=tcqn1     " t - autowrap normal text
                             " 1 - break _before_ single-letter words
                             " 2 - use indenting from 2nd line of para
 
-set list                    " Show whitespace as special chars - see listchars
-set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:· " Unicode characters for various things
+" tab:▸\ "
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬ " Unicode characters for various things
 
 " Some useful macros
 nmap \A :set formatoptions+=a<CR>:echo "autowrap enabled"<CR>
