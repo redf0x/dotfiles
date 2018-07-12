@@ -83,6 +83,8 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?'  ['.l:branchname.'] ':''
 endfunction
 
+nnoremap <Backspace> <C-o>
+nnoremap <Space> <C-i>
 map <C-o> :NERDTreeToggle<CR>
 map <C-e> :new<CR>
 map <C-f> :enew<CR>
