@@ -85,6 +85,7 @@ endfunction
 
 nnoremap <Backspace> <C-o>
 nnoremap <Space> <C-i>
+
 map <C-o> :NERDTreeToggle<CR>
 map <C-e> :new<CR>
 map <C-f> :enew<CR>
@@ -150,6 +151,10 @@ if !has('gui_running')
   endif
 endif
 syntax on
+
+" Line cursor
+hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+nnoremap <Leader>c :set cursorline!<CR>
 
 " Window splits & ruler are too bright, so change to white on grey (non-GUI)
 highlight VertSplit cterm=NONE ctermbg=white ctermfg=white
