@@ -59,9 +59,36 @@ vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
-" Trim spaces at EOL and retab. I run `:Clean` a lot to clean up files.
-command! TEOL %s/\s\+$//
-command! Clean retab | TEOL
+function! CleanSpaces()
+  silent! execute '%s/\s\+$//ge'
+  silent! execute 'g/\v^$\n*%$/norm! dd'
+endfunction
+
+function! Format()
+  silent! execute 'norm! mz'
+
+  if &ft ==? 'c' || &ft ==? 'cpp' || &ft ==? 'php'
+    set formatprg=astyle\ --style=kr\ --indent=force-tab=8\
+			    \ --attach-closing-while\ --align-pointer=type\ --indent-switches\
+			    \ --indent-col1-comments\ --break-blocks\ --pad-oper\ --pad-comma\
+			    \ --unpad-paren\ --break-one-line-headers\ --remove-braces\ --pad-header\
+			    \ --attach-return-type\ --attach-return-type-decl
+    silent! execute 'norm! gggqG'
+  elseif &ft ==? 'java'
+    set formatprg=astyle\ --mode=java
+    silent! execute 'norm! gggqG'
+  endif
+
+  silent! call CleanSpaces()
+  silent! execute 'retab'
+  silent! execute 'gg=G'
+  silent! execute 'norm! `z'
+  set formatprg=
+endfunction
+
+" Trim spaces at EOL and retab
+command! Clean retab | execute CleanSpaces()
+command! Format execute Format()
 
 " Close all buffers except this one
 command! BufCloseOthers %bd|e#
@@ -163,4 +190,3 @@ highlight VertSplit cterm=NONE ctermbg=white ctermfg=white
 silent! nohlsearch
 
 " vim:set tw=80:
-
