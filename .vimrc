@@ -26,6 +26,10 @@ set formatoptions=tcqn1     " t - autowrap normal text
 " tab:▸\ "
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬ " Unicode characters for various things
 
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+
 " Some useful macros
 nmap \A :set formatoptions+=a<CR>:echo "autowrap enabled"<CR>
 nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
