@@ -127,10 +127,9 @@ nmap <S-F5> :sp <CR>
 
 map <F6> <C-W>w
 
-nmap <F9> :bd <CR>
-nmap <C-d> :BD <CR>
-nmap <S-F9> :close <CR>
-nmap <F10> :q <CR>
+nmap <C-d> :bd <CR>
+nmap <F10> :BD <CR>
+nmap <S-F10> :q <CR>
 
 nmap <silent><M-Left> :wincmd h <CR>
 nmap <silent><M-Right> :wincmd l <CR>
