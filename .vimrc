@@ -29,6 +29,7 @@ set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬ " Unicod
 set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
+set tags=./.tags;/
 
 " Some useful macros
 nmap \A :set formatoptions+=a<CR>:echo "autowrap enabled"<CR>
@@ -47,6 +48,7 @@ nmap \u :setlocal list!<CR>:setlocal list?<CR>
 nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 nmap \x :cclose<CR>
 nmap \z :w<CR>:!open %<CR><CR>
+nmap \<F3> :silent !ctags -R --exclude=.git -f .tags .<CR>
 
 " Turn off linewise keys. Normally, the `j' and `k' keys move the cursor down one entire line. with
 " line wrapping on, this can cause the cursor to actually skip a few lines on the screen because
@@ -129,7 +131,7 @@ map <F6> <C-W>w
 
 nmap <C-d> :bd <CR>
 nmap <F10> :BD <CR>
-nmap <S-F10> :q <CR>
+nmap <S-F10> :close <CR>
 
 nmap <silent><M-Left> :wincmd h <CR>
 nmap <silent><M-Right> :wincmd l <CR>
