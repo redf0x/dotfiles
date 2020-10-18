@@ -130,6 +130,7 @@ nmap <S-F5> :sp <CR>
 map <F6> <C-W>w
 
 nmap <C-d> :bd <CR>
+nmap <C-l> \be <CR>
 nmap <F10> :BD <CR>
 nmap <S-F10> :close <CR>
 
