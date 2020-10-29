@@ -46,7 +46,6 @@ nmap \s :setlocal invspell<CR>
 nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nmap \u :setlocal list!<CR>:setlocal list?<CR>
 nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
-nmap \x :cclose<CR>
 nmap \z :w<CR>:!open %<CR><CR>
 nmap \<F3> :silent !ctags -R --exclude=.git -f .tags .<CR>
 
@@ -132,7 +131,7 @@ map <F6> <C-W>w
 nmap <C-d> :bd <CR>
 nmap <C-l> \bt <CR>
 nmap <F10> :BD <CR>
-nmap <S-F10> :close <CR>
+nmap <S-F10> :cclose <CR>
 
 nmap <silent><M-Left> :wincmd h <CR>
 nmap <silent><M-Right> :wincmd l <CR>
