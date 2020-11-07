@@ -131,7 +131,7 @@ map <F6> <C-W>w
 nmap <C-d> :bd <CR>
 nmap <C-l> \bt <CR>
 nmap <F10> :BD <CR>
-nmap <S-F10> :cclose <CR>
+nmap <S-F10> :close <CR>
 
 nmap <silent><M-Left> :wincmd h <CR>
 nmap <silent><M-Right> :wincmd l <CR>
