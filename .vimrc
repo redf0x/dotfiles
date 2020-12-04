@@ -103,6 +103,7 @@ execute pathogen#infect()
 execute pathogen#helptags()
 filetype indent plugin on
 
+let g:NERDTreeWinSize = 22
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
