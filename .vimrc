@@ -107,6 +107,8 @@ let g:NERDTreeWinSize = 22
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
+let g:Tlist_WinWidth = 30
+
 function! GitBranch()
   return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 endfunction
@@ -122,6 +124,7 @@ nnoremap <Space> <C-i>
 map <C-o> :NERDTreeToggle<CR>
 map <C-e> :new<CR>
 map <C-f> :enew<CR>
+map <C-t> :Tlist<CR>
 
 nmap <F2> :w <CR>
 nmap <F5> :vsp <CR>
