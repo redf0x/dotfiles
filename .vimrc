@@ -47,7 +47,7 @@ nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nmap \u :setlocal list!<CR>:setlocal list?<CR>
 nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 nmap \z :w<CR>:!open %<CR><CR>
-nmap \<F3> :silent !ctags -R --exclude=.git -f .tags .<CR>
+nmap \<F3> :AsyncRun ctags -R --exclude=.git -f .tags .<CR>
 
 " Turn off linewise keys. Normally, the `j' and `k' keys move the cursor down one entire line. with
 " line wrapping on, this can cause the cursor to actually skip a few lines on the screen because
